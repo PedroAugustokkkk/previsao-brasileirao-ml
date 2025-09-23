@@ -1,7 +1,8 @@
 import requests  # Importa a biblioteca para fazer requisições HTTP (acessar a API).
 import pandas as pd  # Importa a biblioteca pandas para organizar os dados em uma tabela (DataFrame).
 import json # Importa a biblioteca para trabalhar com o formato de dados JSON, que é o que a API retorna.
-
+from dotenv import load_dotenv # para gerenciar variáveis de ambiente
+load_dotenv()
 # O endpoint 'fixtures' é o que nos dá os dados das partidas de futebol.
 url = "https://v3.football.api-sports.io/fixtures"
 
@@ -51,4 +52,5 @@ for jogo in dados_json['response']:
 df_jogos = pd.DataFrame(lista_jogos)
 
 print("Dados dos jogos do Brasileirão 2024:") # Imprime um título.
+
 print(df_jogos.head()) # Exibe as 5 primeiras linhas do nosso DataFrame para verificação.
