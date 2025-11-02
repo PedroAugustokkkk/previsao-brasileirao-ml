@@ -1,4 +1,6 @@
-requests
 pandas
-dotenv
-json
+numpy
+requests
+scikit-learn
+lightgbm
+python-dotenv
